@@ -25,7 +25,7 @@ The required _identifier_ [argument](../../Glossary/vbe-glossary.md#argument) is
 
 **IsObject** returns **True** if _identifier_ is a variable declared with [Object](../../Glossary/vbe-glossary.md#object) type or any valid [class](../../Glossary/vbe-glossary.md#class) type, or if _identifier_ is a **Variant** of **VarType vbObject**, or a user-defined object; otherwise, it returns **False**. 
 
-**IsObject** returns **True** even if the variable has been set to **Nothing**. Use error trapping to be sure that an object reference is valid.
+**IsObject** returns **True** even if the variable has been set to **Nothing**. Use error trapping to be sure that an object reference is valid, or test if ObjPtr(_identifier_) is equal to zero.
 
 > [!NOTE] 
 > This function is useful in error handling sections of the code where you are not sure whether an object was instantiated before the error occurred, and for example, you want to close it.
